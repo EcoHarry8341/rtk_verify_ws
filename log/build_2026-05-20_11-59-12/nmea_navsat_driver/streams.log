@@ -1,0 +1,37 @@
+[1.900s] Invoking command in '/home/cat/rtk_verify_ws/build/nmea_navsat_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/rtk_verify_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cat/rtk_verify_ws/build/nmea_navsat_driver/build --no-deps symlink_data
+[2.378s] running develop
+[2.684s] running egg_info
+[2.684s] creating src/nmea_navsat_driver.egg-info
+[2.712s] writing src/nmea_navsat_driver.egg-info/PKG-INFO
+[2.712s] writing dependency_links to src/nmea_navsat_driver.egg-info/dependency_links.txt
+[2.712s] writing entry points to src/nmea_navsat_driver.egg-info/entry_points.txt
+[2.713s] writing requirements to src/nmea_navsat_driver.egg-info/requires.txt
+[2.713s] writing top-level names to src/nmea_navsat_driver.egg-info/top_level.txt
+[2.713s] writing manifest file 'src/nmea_navsat_driver.egg-info/SOURCES.txt'
+[2.770s] reading manifest file 'src/nmea_navsat_driver.egg-info/SOURCES.txt'
+[2.771s] writing manifest file 'src/nmea_navsat_driver.egg-info/SOURCES.txt'
+[2.801s] running build_ext
+[2.806s] Creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages/nmea-navsat-driver.egg-link (link to src)
+[2.807s] Installing nmea_serial_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[2.807s] Installing nmea_socket_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[2.807s] Installing nmea_tcpclient_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[2.807s] Installing nmea_topic_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[2.808s] Installing nmea_topic_serial_reader script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[2.808s] 
+[2.808s] Installed /home/cat/rtk_verify_ws/build/nmea_navsat_driver/src
+[2.808s] running symlink_data
+[2.808s] creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/ament_index
+[2.808s] creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/ament_index/resource_index
+[2.808s] creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/ament_index/resource_index/packages
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/resource/nmea_navsat_driver -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/ament_index/resource_index/packages
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/package.xml -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver
+[2.809s] creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/launch/nmea_socket_driver.launch.py -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/launch/um982.launch.py -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/launch/nmea_tcpclient_driver.launch.py -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[2.809s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/launch/nmea_serial_driver.launch.py -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[2.809s] creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[2.810s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/config/nmea_serial_driver.yaml -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[2.810s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/config/nmea_tcpclient_driver.yaml -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[2.810s] symbolically linking /home/cat/rtk_verify_ws/build/nmea_navsat_driver/config/nmea_socket_driver.yaml -> /home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[2.906s] Invoked command in '/home/cat/rtk_verify_ws/build/nmea_navsat_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/rtk_verify_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cat/rtk_verify_ws/build/nmea_navsat_driver/build --no-deps symlink_data

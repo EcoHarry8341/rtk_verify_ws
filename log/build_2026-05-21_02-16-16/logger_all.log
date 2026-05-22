@@ -1,0 +1,294 @@
+[0.172s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release']
+[0.172s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff93fade80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff941a2840>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff941a2840>>)
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.234s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cat/rtk_verify_ws'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ros'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['cmake', 'python']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'cmake'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'python'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['python_setup_py']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'python_setup_py'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'ros'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['cmake', 'python']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'cmake'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'python'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extensions ['python_setup_py']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison) by extension 'python_setup_py'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'ros'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['cmake', 'python']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'cmake'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'python'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extensions ['python_setup_py']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison1) by extension 'python_setup_py'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'ros'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extensions ['python_setup_py']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison2) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison521) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(bags/trajectory_comparison5212) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['python_setup_py']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python_setup_py'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtk_localization) by extension 'ros'
+[0.289s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rtk_localization' with type 'ros.ament_cmake' and name 'rtk_localization'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/um982_driver_ros2_jazzy) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/um982_driver_ros2_jazzy' with type 'ros.ament_python' and name 'nmea_navsat_driver'
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.322s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/cat/rtk_verify_ws/install
+[0.324s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 20 installed packages in /home/cat/ranger_ws/install
+[0.324s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/cat/rtk_ws/install
+[0.327s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 414 installed packages in /opt/ros/jazzy
+[0.330s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_target' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.418s] DEBUG:colcon.colcon_core.verb:Building package 'nmea_navsat_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cat/rtk_verify_ws/build/nmea_navsat_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cat/rtk_verify_ws/install/nmea_navsat_driver', 'merge_install': False, 'path': '/home/cat/rtk_verify_ws/src/um982_driver_ros2_jazzy', 'symlink_install': True, 'test_result_base': None}
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_target' from command line to 'None'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.419s] Level 5:colcon.colcon_core.verb:set package 'rtk_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.419s] DEBUG:colcon.colcon_core.verb:Building package 'rtk_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cat/rtk_verify_ws/build/rtk_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cat/rtk_verify_ws/install/rtk_localization', 'merge_install': False, 'path': '/home/cat/rtk_verify_ws/src/rtk_localization', 'symlink_install': True, 'test_result_base': None}
+[0.419s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.421s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.422s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cat/rtk_verify_ws/src/um982_driver_ros2_jazzy' with build type 'ament_python'
+[0.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_navsat_driver', 'ament_prefix_path')
+[0.425s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.ps1'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.dsv'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.sh'
+[0.428s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.438s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cat/rtk_verify_ws/src/rtk_localization' with build type 'ament_cmake'
+[0.438s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cat/rtk_verify_ws/src/rtk_localization'
+[0.438s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.438s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.840s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cat/rtk_verify_ws/src/um982_driver_ros2_jazzy'
+[0.841s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.841s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cat/rtk_verify_ws/build/rtk_localization': CMAKE_PREFIX_PATH=/home/cat/rtk_verify_ws/install/rtk_localization:/home/cat/ranger_ws/install/ranger_base:/home/cat/rtk_verify_ws/install/nmea_navsat_driver:/home/cat/ranger_ws/install/ranger_defense:/home/cat/ranger_ws/install/hw_interrupt:/home/cat/ranger_ws/install/advanced_crop_follower:/home/cat/rtk_ws/install/nmea_navsat_driver:/opt/ros/jazzy:/home/cat/ranger_ws/install/ugv_sdk:/home/cat/ranger_ws/install/ranger_gicp_localization:/home/cat/ranger_ws/install/small_gicp:/home/cat/ranger_ws/install/rslidar_sdk:/home/cat/ranger_ws/install/rslidar_msg:/home/cat/ranger_ws/install/rs_to_velodyne:/home/cat/ranger_ws/install/ranger_navigation:/home/cat/ranger_ws/install/ranger_msgs:/home/cat/ranger_ws/install/ranger_custom_description:/home/cat/ranger_ws/install/ranger_bringup:/home/cat/ranger_ws/install/pcd2pgm:/home/cat/ranger_ws/install/lidar_localization_ros2:/home/cat/ranger_ws/install/ndt_omp_ros2:/home/cat/ranger_ws/install/lio_sam:/home/cat/ranger_ws/install/hipnuc_imu:/home/cat/ranger_ws/install/hipnuc_lib_package:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cat/rtk_verify_ws/build/rtk_localization -- -j8 -l8
+[0.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cat/rtk_verify_ws/build/rtk_localization' returned '0': CMAKE_PREFIX_PATH=/home/cat/rtk_verify_ws/install/rtk_localization:/home/cat/ranger_ws/install/ranger_base:/home/cat/rtk_verify_ws/install/nmea_navsat_driver:/home/cat/ranger_ws/install/ranger_defense:/home/cat/ranger_ws/install/hw_interrupt:/home/cat/ranger_ws/install/advanced_crop_follower:/home/cat/rtk_ws/install/nmea_navsat_driver:/opt/ros/jazzy:/home/cat/ranger_ws/install/ugv_sdk:/home/cat/ranger_ws/install/ranger_gicp_localization:/home/cat/ranger_ws/install/small_gicp:/home/cat/ranger_ws/install/rslidar_sdk:/home/cat/ranger_ws/install/rslidar_msg:/home/cat/ranger_ws/install/rs_to_velodyne:/home/cat/ranger_ws/install/ranger_navigation:/home/cat/ranger_ws/install/ranger_msgs:/home/cat/ranger_ws/install/ranger_custom_description:/home/cat/ranger_ws/install/ranger_bringup:/home/cat/ranger_ws/install/pcd2pgm:/home/cat/ranger_ws/install/lidar_localization_ros2:/home/cat/ranger_ws/install/ndt_omp_ros2:/home/cat/ranger_ws/install/lio_sam:/home/cat/ranger_ws/install/hipnuc_imu:/home/cat/ranger_ws/install/hipnuc_lib_package:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cat/rtk_verify_ws/build/rtk_localization -- -j8 -l8
+[0.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cat/rtk_verify_ws/build/rtk_localization': CMAKE_PREFIX_PATH=/home/cat/rtk_verify_ws/install/rtk_localization:/home/cat/ranger_ws/install/ranger_base:/home/cat/rtk_verify_ws/install/nmea_navsat_driver:/home/cat/ranger_ws/install/ranger_defense:/home/cat/ranger_ws/install/hw_interrupt:/home/cat/ranger_ws/install/advanced_crop_follower:/home/cat/rtk_ws/install/nmea_navsat_driver:/opt/ros/jazzy:/home/cat/ranger_ws/install/ugv_sdk:/home/cat/ranger_ws/install/ranger_gicp_localization:/home/cat/ranger_ws/install/small_gicp:/home/cat/ranger_ws/install/rslidar_sdk:/home/cat/ranger_ws/install/rslidar_msg:/home/cat/ranger_ws/install/rs_to_velodyne:/home/cat/ranger_ws/install/ranger_navigation:/home/cat/ranger_ws/install/ranger_msgs:/home/cat/ranger_ws/install/ranger_custom_description:/home/cat/ranger_ws/install/ranger_bringup:/home/cat/ranger_ws/install/pcd2pgm:/home/cat/ranger_ws/install/lidar_localization_ros2:/home/cat/ranger_ws/install/ndt_omp_ros2:/home/cat/ranger_ws/install/lio_sam:/home/cat/ranger_ws/install/hipnuc_imu:/home/cat/ranger_ws/install/hipnuc_lib_package:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cat/rtk_verify_ws/build/rtk_localization
+[1.037s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rtk_localization)
+[1.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cat/rtk_verify_ws/build/rtk_localization' returned '0': CMAKE_PREFIX_PATH=/home/cat/rtk_verify_ws/install/rtk_localization:/home/cat/ranger_ws/install/ranger_base:/home/cat/rtk_verify_ws/install/nmea_navsat_driver:/home/cat/ranger_ws/install/ranger_defense:/home/cat/ranger_ws/install/hw_interrupt:/home/cat/ranger_ws/install/advanced_crop_follower:/home/cat/rtk_ws/install/nmea_navsat_driver:/opt/ros/jazzy:/home/cat/ranger_ws/install/ugv_sdk:/home/cat/ranger_ws/install/ranger_gicp_localization:/home/cat/ranger_ws/install/small_gicp:/home/cat/ranger_ws/install/rslidar_sdk:/home/cat/ranger_ws/install/rslidar_msg:/home/cat/ranger_ws/install/rs_to_velodyne:/home/cat/ranger_ws/install/ranger_navigation:/home/cat/ranger_ws/install/ranger_msgs:/home/cat/ranger_ws/install/ranger_custom_description:/home/cat/ranger_ws/install/ranger_bringup:/home/cat/ranger_ws/install/pcd2pgm:/home/cat/ranger_ws/install/lidar_localization_ros2:/home/cat/ranger_ws/install/ndt_omp_ros2:/home/cat/ranger_ws/install/lio_sam:/home/cat/ranger_ws/install/hipnuc_imu:/home/cat/ranger_ws/install/hipnuc_lib_package:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cat/rtk_verify_ws/build/rtk_localization
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization' for CMake module files
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization' for CMake config files
+[1.041s] Level 1:colcon.colcon_core.shell:create_environment_hook('rtk_localization', 'cmake_prefix_path')
+[1.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.ps1'
+[1.042s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.dsv'
+[1.042s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.sh'
+[1.043s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/bin'
+[1.043s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/lib/pkgconfig/rtk_localization.pc'
+[1.044s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/lib/python3.12/site-packages'
+[1.044s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/bin'
+[1.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.ps1'
+[1.045s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.dsv'
+[1.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.sh'
+[1.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.bash'
+[1.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.zsh'
+[1.048s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cat/rtk_verify_ws/install/rtk_localization/share/colcon-core/packages/rtk_localization)
+[1.049s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rtk_localization)
+[1.049s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization' for CMake module files
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization' for CMake config files
+[1.050s] Level 1:colcon.colcon_core.shell:create_environment_hook('rtk_localization', 'cmake_prefix_path')
+[1.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.ps1'
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.dsv'
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/hook/cmake_prefix_path.sh'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/bin'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/lib/pkgconfig/rtk_localization.pc'
+[1.052s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/lib/python3.12/site-packages'
+[1.053s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/rtk_localization/bin'
+[1.053s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.ps1'
+[1.054s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.dsv'
+[1.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.sh'
+[1.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.bash'
+[1.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.zsh'
+[1.055s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cat/rtk_verify_ws/install/rtk_localization/share/colcon-core/packages/rtk_localization)
+[1.883s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cat/rtk_verify_ws/build/nmea_navsat_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/rtk_verify_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cat/rtk_verify_ws/build/nmea_navsat_driver/build --no-deps symlink_data
+[2.988s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_navsat_driver', 'pythonpath_develop')
+[2.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/build/nmea_navsat_driver/src/share/nmea_navsat_driver/hook/pythonpath_develop.ps1'
+[2.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cat/rtk_verify_ws/build/nmea_navsat_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/rtk_verify_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cat/rtk_verify_ws/build/nmea_navsat_driver/build --no-deps symlink_data
+[2.990s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cat/rtk_verify_ws/build/nmea_navsat_driver/src/share/nmea_navsat_driver/hook/pythonpath_develop.dsv'
+[2.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/build/nmea_navsat_driver/src/share/nmea_navsat_driver/hook/pythonpath_develop.sh'
+[2.992s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver' for CMake module files
+[2.993s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver' for CMake config files
+[2.994s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib'
+[2.994s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/bin'
+[2.994s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/pkgconfig/nmea_navsat_driver.pc'
+[2.994s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages'
+[2.994s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_navsat_driver', 'pythonpath')
+[2.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.ps1'
+[2.995s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.dsv'
+[2.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.sh'
+[2.997s] Level 1:colcon.colcon_core.environment:checking '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/bin'
+[2.997s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nmea_navsat_driver)
+[2.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.ps1'
+[2.998s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.dsv'
+[2.998s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.sh'
+[2.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.bash'
+[2.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.zsh'
+[3.000s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cat/rtk_verify_ws/install/nmea_navsat_driver/share/colcon-core/packages/nmea_navsat_driver)
+[3.000s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.000s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.001s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.001s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.011s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.012s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.012s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.014s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[3.015s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.015s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cat/rtk_verify_ws/install/local_setup.ps1'
+[3.016s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cat/rtk_verify_ws/install/_local_setup_util_ps1.py'
+[3.018s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cat/rtk_verify_ws/install/setup.ps1'
+[3.020s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cat/rtk_verify_ws/install/local_setup.sh'
+[3.021s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cat/rtk_verify_ws/install/_local_setup_util_sh.py'
+[3.022s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cat/rtk_verify_ws/install/setup.sh'
+[3.024s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cat/rtk_verify_ws/install/local_setup.bash'
+[3.025s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cat/rtk_verify_ws/install/setup.bash'
+[3.027s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cat/rtk_verify_ws/install/local_setup.zsh'
+[3.028s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cat/rtk_verify_ws/install/setup.zsh'

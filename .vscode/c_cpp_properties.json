@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/cat/ranger_ws/install/rslidar_msg/include/**",
+        "/home/cat/ranger_ws/install/ranger_msgs/include/**",
+        "/home/cat/ranger_ws/install/pcd2pgm/include/**",
+        "/home/cat/ranger_ws/install/ndt_omp_ros2/include/**",
+        "/home/cat/ranger_ws/install/lio_sam/include/**",
+        "/home/cat/ranger_ws/install/hipnuc_lib_package/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/home/cat/rtk_verify_ws/src/rtk_localization/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ros2",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

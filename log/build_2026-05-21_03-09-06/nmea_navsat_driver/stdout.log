@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing src/nmea_navsat_driver.egg-info/PKG-INFO
+writing dependency_links to src/nmea_navsat_driver.egg-info/dependency_links.txt
+writing entry points to src/nmea_navsat_driver.egg-info/entry_points.txt
+writing requirements to src/nmea_navsat_driver.egg-info/requires.txt
+writing top-level names to src/nmea_navsat_driver.egg-info/top_level.txt
+reading manifest file 'src/nmea_navsat_driver.egg-info/SOURCES.txt'
+writing manifest file 'src/nmea_navsat_driver.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages/nmea-navsat-driver.egg-link (link to src)
+Installing nmea_serial_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+Installing nmea_socket_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+Installing nmea_tcpclient_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+Installing nmea_topic_driver script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+Installing nmea_topic_serial_reader script to /home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+
+Installed /home/cat/rtk_verify_ws/build/nmea_navsat_driver/src
+running symlink_data

@@ -1,0 +1,550 @@
+header:
+  stamp:
+    sec: 1779292937
+    nanosec: 448268590
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7023176946032625
+  w: -0.7118636497582654
+---
+header:
+  stamp:
+    sec: 1779292938
+    nanosec: 447278357
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7061781035332244
+  w: -0.7080342407611504
+---
+header:
+  stamp:
+    sec: 1779292939
+    nanosec: 447691624
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7004422928822085
+  w: -0.7137090403952541
+---
+header:
+  stamp:
+    sec: 1779292940
+    nanosec: 502847814
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7033140606418883
+  w: -0.7108792668965795
+---
+header:
+  stamp:
+    sec: 1779292941
+    nanosec: 448280159
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7000959177267099
+  w: -0.714048812044664
+---
+header:
+  stamp:
+    sec: 1779292942
+    nanosec: 449230968
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7015581667372818
+  w: -0.7126121937521307
+---
+header:
+  stamp:
+    sec: 1779292943
+    nanosec: 446736026
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7045921019478416
+  w: -0.7096125491229157
+---
+header:
+  stamp:
+    sec: 1779292944
+    nanosec: 448592752
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7058122264622325
+  w: -0.7083989701971808
+---
+header:
+  stamp:
+    sec: 1779292945
+    nanosec: 447676311
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7010710776504155
+  w: -0.7130913995288998
+---
+header:
+  stamp:
+    sec: 1779292946
+    nanosec: 448674078
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.6993696152596195
+  w: -0.7147601984243469
+---
+header:
+  stamp:
+    sec: 1779292947
+    nanosec: 447202012
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7126936148765292
+  w: -0.7014754531088209
+---
+header:
+  stamp:
+    sec: 1779292948
+    nanosec: 447846570
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.6909265733375745
+  w: -0.7229249409558349
+---
+header:
+  stamp:
+    sec: 1779292949
+    nanosec: 446203879
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.6910767057378163
+  w: -0.7227814239357342
+---
+header:
+  stamp:
+    sec: 1779292950
+    nanosec: 456697439
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.6999419895548616
+  w: -0.7141996998445056
+---
+header:
+  stamp:
+    sec: 1779292951
+    nanosec: 447851164
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.714732123352771
+  w: -0.6993983070094174
+---
+header:
+  stamp:
+    sec: 1779292952
+    nanosec: 449920806
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7114872344743579
+  w: -0.7026990217582704
+---
+header:
+  stamp:
+    sec: 1779292953
+    nanosec: 446984864
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7076983008214547
+  w: -0.706514766310249
+---
+header:
+  stamp:
+    sec: 1779292954
+    nanosec: 445523298
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.706387532740525
+  w: -0.7078252987770031
+---
+header:
+  stamp:
+    sec: 1779292955
+    nanosec: 447940315
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7009049072877184
+  w: -0.7132547307519208
+---
+header:
+  stamp:
+    sec: 1779292956
+    nanosec: 449820083
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7104501183134413
+  w: -0.7037475608401191
+---
+header:
+  stamp:
+    sec: 1779292957
+    nanosec: 447413225
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7048484270193305
+  w: -0.7093579455594866
+---
+header:
+  stamp:
+    sec: 1779292958
+    nanosec: 448781409
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7165807793738134
+  w: -0.6975041122688943
+---
+header:
+  stamp:
+    sec: 1779292959
+    nanosec: 446526509
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.714821837475455
+  w: -0.6993066142031078
+---
+header:
+  stamp:
+    sec: 1779292960
+    nanosec: 451600318
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7104132692034701
+  w: -0.7037847589566272
+---
+header:
+  stamp:
+    sec: 1779292961
+    nanosec: 445629001
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7170997909470103
+  w: -0.69697050857533
+---
+header:
+  stamp:
+    sec: 1779292962
+    nanosec: 452103978
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7208179106108501
+  w: -0.693124476369583
+---
+header:
+  stamp:
+    sec: 1779292963
+    nanosec: 448811036
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7192070285733712
+  w: -0.6947958333572979
+---
+header:
+  stamp:
+    sec: 1779292964
+    nanosec: 446909928
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7295400658444162
+  w: -0.6839380763839112
+---
+header:
+  stamp:
+    sec: 1779292965
+    nanosec: 449626779
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7356462307793165
+  w: -0.677365944774451
+---
+header:
+  stamp:
+    sec: 1779292966
+    nanosec: 450640004
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7384182677999124
+  w: -0.6743429852674208
+---
+header:
+  stamp:
+    sec: 1779292967
+    nanosec: 450566188
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7295460343022938
+  w: -0.6839317099197816
+---
+header:
+  stamp:
+    sec: 1779292968
+    nanosec: 449497205
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7278266194600024
+  w: -0.6857611916734753
+---
+header:
+  stamp:
+    sec: 1779292969
+    nanosec: 448520097
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7296862770676416
+  w: -0.6837820830199963
+---
+header:
+  stamp:
+    sec: 1779292970
+    nanosec: 446298739
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7244347982484893
+  w: -0.6893433274404493
+---
+header:
+  stamp:
+    sec: 1779292971
+    nanosec: 444329089
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7178237953147227
+  w: -0.6962248192071057
+---
+header:
+  stamp:
+    sec: 1779292972
+    nanosec: 450449690
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7148285503041152
+  w: -0.6992997523738422
+---
+header:
+  stamp:
+    sec: 1779292973
+    nanosec: 447860541
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7170389660657545
+  w: -0.6970330846834702
+---
+header:
+  stamp:
+    sec: 1779292974
+    nanosec: 451002058
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7145563228147684
+  w: -0.6995779166936563
+---
+header:
+  stamp:
+    sec: 1779292975
+    nanosec: 444896575
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7102652389900483
+  w: -0.7039341519505994
+---
+header:
+  stamp:
+    sec: 1779292976
+    nanosec: 446247259
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7111234994205088
+  w: -0.7030671152684711
+---
+header:
+  stamp:
+    sec: 1779292977
+    nanosec: 449212318
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7110909809444479
+  w: -0.7031000048495681
+---
+header:
+  stamp:
+    sec: 1779292978
+    nanosec: 448208960
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7118238109055297
+  w: -0.7023580726580486
+---
+header:
+  stamp:
+    sec: 1779292979
+    nanosec: 445324643
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7155744838790168
+  w: -0.6985364400095952
+---
+header:
+  stamp:
+    sec: 1779292980
+    nanosec: 445782536
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7098480056900986
+  w: -0.7043548884034168
+---
+header:
+  stamp:
+    sec: 1779292981
+    nanosec: 443694761
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7182015985701596
+  w: -0.6958350837743577
+---
+header:
+  stamp:
+    sec: 1779292982
+    nanosec: 446698903
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7147180853850786
+  w: -0.6994126524616834
+---
+header:
+  stamp:
+    sec: 1779292983
+    nanosec: 443358420
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7172974340934746
+  w: -0.6967670995698043
+---
+header:
+  stamp:
+    sec: 1779292984
+    nanosec: 446277104
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.713822112567905
+  w: -0.700327060457536
+---
+header:
+  stamp:
+    sec: 1779292985
+    nanosec: 444804163
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7191761053500386
+  w: -0.6948278416223332
+---
+header:
+  stamp:
+    sec: 1779292986
+    nanosec: 445289472
+  frame_id: gps_link
+quaternion:
+  x: -0.0
+  y: 0.0
+  z: 0.7131898922790681
+  w: -0.700970882099229
+---

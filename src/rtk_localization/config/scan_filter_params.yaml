@@ -1,0 +1,12 @@
+/**:
+  ros__parameters:
+    min_height: 0.2      # 忽略地面 20cm 以下的杂草、石头和地面反射
+    max_height: 1.5      # 扫到 1.5m 高度的物体（墙壁、树干等）
+    angle_min: -3.14159
+    angle_max: 3.14159
+    angle_increment: 0.0058
+    range_min: 0.12
+    range_max: 30.0
+    use_inf: true
+    target_frame: base_footprint
+    transform_tolerance: 0.1

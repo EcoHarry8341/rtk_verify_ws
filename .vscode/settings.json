@@ -1,0 +1,35 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/cat/rtk_verify_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/rslidar_msg/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/ranger_msgs/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/ranger_defense",
+        "/home/cat/ranger_ws/install/ranger_defense/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/lio_sam/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/hw_interrupt",
+        "/home/cat/ranger_ws/install/hw_interrupt/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/advanced_crop_follower",
+        "/home/cat/ranger_ws/install/advanced_crop_follower/lib/python3.12/site-packages",
+        "/home/cat/rtk_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/cat/rtk_verify_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_verify_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/rslidar_msg/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/ranger_msgs/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/ranger_defense",
+        "/home/cat/ranger_ws/install/ranger_defense/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/install/lio_sam/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/hw_interrupt",
+        "/home/cat/ranger_ws/install/hw_interrupt/lib/python3.12/site-packages",
+        "/home/cat/ranger_ws/build/advanced_crop_follower",
+        "/home/cat/ranger_ws/install/advanced_crop_follower/lib/python3.12/site-packages",
+        "/home/cat/rtk_ws/build/nmea_navsat_driver/src",
+        "/home/cat/rtk_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

@@ -1,0 +1,22 @@
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/launch/mapping_absolute.launch.py
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/launch/rtk_localization.launch.py
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/dual_ekf_navsat.yaml
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/scan_filter_params.yaml
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/slam_mapping_absolute.yaml
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/ament_index/resource_index/package_run_dependencies/rtk_localization
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/ament_index/resource_index/parent_prefix_path/rtk_localization
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/environment/path.sh
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/environment/path.dsv
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/local_setup.bash
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/local_setup.sh
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/local_setup.zsh
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/local_setup.dsv
+-- Symlinking: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.dsv
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/ament_index/resource_index/packages/rtk_localization
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/cmake/rtk_localizationConfig.cmake
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/cmake/rtk_localizationConfig-version.cmake
+-- Up-to-date symlink: /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/package.xml

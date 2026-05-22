@@ -1,0 +1,1 @@
+/home/cat/rtk_verify_ws/build/nmea_navsat_driver/launch/um982.launch.py

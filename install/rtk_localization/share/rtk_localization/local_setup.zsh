@@ -1,0 +1,1 @@
+/home/cat/rtk_verify_ws/build/rtk_localization/ament_cmake_environment_hooks/local_setup.zsh

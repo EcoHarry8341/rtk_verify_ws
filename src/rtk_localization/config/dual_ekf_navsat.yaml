@@ -1,0 +1,67 @@
+ekf_filter_node_local:
+  ros__parameters:
+    use_sim_time: false
+    frequency: 50.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    print_diagnostics: true
+    debug: false
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom
+    odom0: /odom
+    odom0_config: [false, false, false, false, false, false, true,  true,  false, false, false, true, false, false, false]
+    odom0_queue_size: 10
+    odom0_differential: false
+    imu0: /IMU_data
+    imu0_config: [false, false, false, false, false, true, false, false, false, false, false, true, true,  false, false]
+    imu0_queue_size: 10
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true
+
+ekf_filter_node_global:
+  ros__parameters:
+    use_sim_time: false
+    frequency: 30.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    print_diagnostics: true
+    debug: false
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: map
+    odom0: /odom
+    odom0_config: [false, false, false, false, false, false, true,  true,  false, false, false, true, false, false, false]
+    odom0_queue_size: 10
+    odom0_differential: false
+    imu0: /IMU_data
+    imu0_config: [false, false, false, false, false, true, false, false, false, false, false, true, true,  false, false]
+    imu0_queue_size: 10
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true
+    odom1: /odometry/gps
+    odom1_config: [true,  true,  false, false, false, false, false, false, false, false, false, false, false, false, false]
+    odom1_queue_size: 10
+    odom1_differential: false
+
+navsat_transform_node:
+  ros__parameters:
+    use_sim_time: false
+    frequency: 10.0
+    delay: 0.0
+    magnetic_declination_radians: 0.0
+    yaw_offset: 0.0
+    zero_altitude: true
+    broadcast_cartesian_transform: false
+    publish_filtered_gps: true
+    use_odometry_yaw: false
+    wait_for_datum: true
+    base_link_frame: base_footprint
+    # 一会去停车场替换！
+    datum: [45.7394912333, 126.7170297150, -1.5708]   # 实测均值，第三个是航向角
