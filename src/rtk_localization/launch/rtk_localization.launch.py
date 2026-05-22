@@ -64,7 +64,7 @@ def generate_launch_description():
         name='ekf_filter_node_global',
         output='screen',
         parameters=[config_file],
-        remappings=[('odometry/filtered', 'odometry/global')]
+        remappings=[('odometry/filtered', 'odometry/global')]  
     )
 
     # 5. Navsat Transform (天眼转换器)

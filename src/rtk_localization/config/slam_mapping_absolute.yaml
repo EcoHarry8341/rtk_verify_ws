@@ -1,32 +1,34 @@
 slam_toolbox:
   ros__parameters:
+    # 坐标系（必须正确，与你的 TF 树一致）
     odom_frame: odom
     map_frame: map
     base_frame: base_footprint
+    
+    # 输入话题
     scan_topic: /scan
-    use_scan_matching: true
-    use_scan_barycenter: true
-    use_odometry: true
-    odom_topic: /odometry/local
-    publish_tf: false
+    
+    # 模式
     mode: mapping
-    debug_logging: false
-    throttle_scans: 1
-    transform_publish_period: 0.02
+    
+    # TF 控制（已修复）
+    transform_publish_period: 0.0
+    
+    # 地图更新
     map_update_interval: 2.0
     resolution: 0.05
+    
+    # 扫描匹配阈值
     minimum_travel_distance: 0.2
     minimum_travel_heading: 0.2
     scan_buffer_size: 15
     scan_buffer_maximum_scan_distance: 15.0
-    link_match_minimum_response_fine: 0.1
-    link_scan_maximum_distance: 2.0
-    loop_search_maximum_distance: 4.0
+    
+    # 闭环检测
     do_loop_closing: true
+    loop_search_maximum_distance: 4.0
     loop_match_minimum_chain_size: 10
-    loop_match_maximum_variance_coarse: 2.0
-    loop_match_minimum_response_coarse: 0.4
-    loop_match_minimum_response_fine: 0.03
-    correlation_search_space_dimension: 0.5
-    correlation_search_space_resolution: 0.01
-    correlation_search_space_smear_deviation: 0.1
+    
+    # 其他
+    throttle_scans: 1
+    debug_logging: false
