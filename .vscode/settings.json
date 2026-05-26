@@ -31,5 +31,6 @@
         "/home/cat/rtk_ws/build/nmea_navsat_driver/src",
         "/home/cat/rtk_ws/install/nmea_navsat_driver/lib/python3.12/site-packages",
         "/opt/ros/jazzy/lib/python3.12/site-packages"
-    ]
+    ],
+    "cmake.sourceDirectory": "/home/cat/rtk_verify_ws/src/rtk_localization"
 }
