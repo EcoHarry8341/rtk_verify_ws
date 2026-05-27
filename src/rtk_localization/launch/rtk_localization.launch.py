@@ -17,33 +17,43 @@ def generate_launch_description():
     )
 
     # =========================================================
-    # 2. 注入物理灵魂：建立静态 TF 树
-    # 规则：[x, y, z, roll, pitch, yaw, parent_frame, child_frame]
-    # 请根据你用尺子量出来的真实数据修改这些值！
+    # 2. 注入物理灵魂：建立静态 TF 树 (强制 RPY 为 0，保证 2D SLAM 切片水平)
     # =========================================================
     
-# 替换雷达 TF
+    # 2.1 雷达 (使用标定推算出的极高精度 XYZ，强制平放)
     tf_base_to_lidar = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_lidar',
-        arguments=['-0.019', '0.0', '0.830', '0.0', '0.0', '0.0', 'base_footprint', 'rslidar']
+        arguments=[
+            '--x', '-0.018', '--y', '0.027', '--z', '0.756',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--frame-id', 'base_footprint', '--child-frame-id', 'rslidar'
+        ]
     )
 
-    # 替换 IMU TF
+    # 2.2 IMU
     tf_base_to_imu = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_imu',
-        arguments=['-0.087', '0.0', '0.596', '0.0', '0.0', '0.0', 'base_footprint', 'imu_link']
+        arguments=[
+            '--x', '-0.087', '--y', '0.0', '--z', '0.596',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--frame-id', 'base_footprint', '--child-frame-id', 'imu_link'
+        ]
     )
 
-    # 替换 GPS 天线 TF
+    # 2.3 GPS天线
     tf_base_to_gps = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_gps',
-        arguments=['-0.410', '0.135', '0.509', '0.0', '0.0', '0.0', 'base_footprint', 'gps_link']
+        arguments=[
+            '--x', '-0.410', '--y', '0.135', '--z', '0.509',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--frame-id', 'base_footprint', '--child-frame-id', 'gps_link'
+        ]
     )
     # =========================================================
 
@@ -85,9 +95,9 @@ def generate_launch_description():
 
     return LaunchDescription([
         um982_driver_launch,
-        tf_base_to_lidar,  # 挂载雷达
-        tf_base_to_imu,    # 挂载IMU
-        tf_base_to_gps,    # 挂载天线
+        tf_base_to_lidar,  
+        tf_base_to_imu,    
+        tf_base_to_gps,    
         ekf_local_node,
         ekf_global_node,
         navsat_transform_node
