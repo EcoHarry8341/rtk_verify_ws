@@ -1,0 +1,1 @@
+/home/cat/rtk_verify_ws/src/rtk_localization/launch/nav2_bringup.launch.py

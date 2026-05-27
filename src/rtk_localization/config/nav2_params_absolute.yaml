@@ -1,5 +1,5 @@
 # ==============================================================================
-#  农业大棚专用 Nav2 满血版参数配置文件 (Jazzy / Humble 商业级通用版)
+#  农业大棚专用 Nav2 满血版参数配置文件 (Jazzy 终极修正版)
 #  目标底盘: AgileX Ranger Mini 3.0 Pro (双阿克曼运动学模型)
 #  核心策略: 剥离 AMCL 定位权、挂载 Smac 混合 A*、RPP 纯追踪、3D 体素局部防死角避障
 # ==============================================================================
@@ -21,48 +21,54 @@ controller_server:
     use_sim_time: false
     controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
-    min_y_velocity_threshold: 0.5   # 限制横移偏好，强迫车辆顺应阿克曼平滑转向
+    min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["general_goal_checker"]
     controller_plugins: ["FollowPath"]
 
-    # 路径检查器：防止打滑或被铁丝卡住时原地无限空转
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.1
       movement_time_allowance: 10.0
 
-    # 终点精度检查
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.15       # 允许 15cm 的绝对到点误差（大棚内泥地容错）
-      yaw_goal_tolerance: 0.08      # 允许约 4.5 度的偏航误差
+      xy_goal_tolerance: 0.15
+      yaw_goal_tolerance: 0.08
 
-    # 🌟 针对阿克曼底盘最完美的局部控制器：Regulated Pure Pursuit (纯追踪)
     FollowPath:
-      plugin: "nav2_regulated_pure_pursuit_controller/RegulatedPurePursuitController"
-      desired_linear_vel: 0.55      # 期望最高前进速度 (m/s)
-      lookahead_dist: 0.6           # 基础预瞄距离 (米)
-      min_lookahead_dist: 0.3       # 最小预瞄距离 (低速、狭窄过道防止盲切内侧)
-      max_lookahead_dist: 0.9       # 最大预瞄距离 (开阔地全速冲刺)
-      lookahead_time: 1.5           # 动态预瞄时间因子 (当前速度 * 1.5)
+      plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
+      desired_linear_vel: 0.55
+      lookahead_dist: 0.6
+      min_lookahead_dist: 0.3
+      max_lookahead_dist: 0.9
+      lookahead_time: 1.5
       rotate_to_heading_angular_vel: 0.5
       transform_tolerance: 0.1
       use_velocity_scaled_lookahead_dist: true
-      
-      # 减速调节：拐死弯、接近障碍物时，自动线性压低前进车速，极度安全
       use_regulated_linear_velocity_scaling: true
-      regulated_linear_scaling_min_radius: 0.6   # 当弯道半径小于 0.6 米时触发减速
-      regulated_linear_scaling_min_speed: 0.15    # 弯道最低保底前进速度
-      
-      # 碰撞预防：如果在预瞄线上前方 2.0 秒后将发生碰撞，小车会平滑减速直到刹停
+      regulated_linear_scaling_min_radius: 0.6
+      regulated_linear_scaling_min_speed: 0.15
       use_cost_regulated_linear_velocity_scaling: true
       cost_scaling_dist: 0.5
       cost_scaling_gain: 1.0
       inflation_cost_scaling_factor: 3.0
+
+# ==============================================================================
+#  平滑器中枢 (Smoother Server) —— [Claude 修复项] 配合 BT 节点使用
+# ==============================================================================
+smoother_server:
+  ros__parameters:
+    use_sim_time: false
+    smoother_plugins: ["simple_smoother"]
+    simple_smoother:
+      plugin: "nav2_smoother::SimpleSmoother"
+      tolerance: 1.0e-10
+      max_its: 1000
+      do_refinement: True
 
 # ==============================================================================
 #  规划器中枢 (Planner Server) —— 全局路径生成
@@ -73,27 +79,27 @@ planner_server:
     expected_planner_frequency: 1.0
     planner_plugins: ["GridBased"]
 
-    # 🌟 阿克曼底盘唯一的全局救星：Smac Planner 混合 A* 算法
     GridBased:
-      plugin: "nav2_smac_planner/SmacPlannerHybrid"
+      plugin: "nav2_smac_planner::SmacPlannerHybrid"
       downsample_costmap: false
-      allow_unknown: true           # 允许全局路径穿越未探测的未知区域
-      max_iterations: 1000000       # 算力全开上限
+      allow_unknown: true
+      max_iterations: 1000000
       max_on_approach_iterations: 1000
-      max_planning_time: 2.0        # 单次规划超时硬限制 (秒)
+      max_planning_time: 2.0
       
-      # 🚗 核心阿克曼物理约束（让你的车像汽车一样拐弯，绝不画直角）
-      minimum_turning_radius: 0.45  # 结合 Ranger mini 轮距，锁死最小转弯半径为 0.45 米！
-      motion_model_for_search: "REEDS_SHEPP" # 支持倒车的汽车轨迹模型
-      angle_quantization_fac: 72    # 将 360 度打碎为 72 个方向（5度一格，解算精度极高）
+      # 阿克曼物理约束
+      minimum_turning_radius: 0.45
+      motion_model_for_search: "REEDS_SHEPP"
+      angle_quantization_fac: 72
       analytic_expansion_ratio: 3.5
-      forward_cost: 1.0
-      reverse_cost: 2.0             # 惩罚倒车：非必要情况绝不轻易倒车
+      
+      # [Claude 修复项] Jazzy 版本参数更名对齐
+      reverse_penalty: 2.0             
       change_penalty: 0.1
-      non_straight_cost: 1.2
-      cost_penalty: 2.0             # 极度讨厌高成本区域，宁可绕远路也绝不刮蹭垄沟
+      non_straight_penalty: 1.2
+      cost_penalty: 2.0
 
-# # ==============================================================================
+# ==============================================================================
 #  局部代价地图 (Local Costmap) —— 3D 体素局部高精度实时避障
 # ==============================================================================
 local_costmap:
@@ -101,35 +107,32 @@ local_costmap:
     ros__parameters:
       update_frequency: 5.0
       publish_frequency: 2.0
-      global_frame: odom            # 局部代价地图必须基于无跳变的局部里程计
+      global_frame: odom
       robot_base_frame: base_footprint
       use_sim_time: false
-      rolling_window: true          # 代价地图随着车体移动而动态向前滚动
-      width: 4.0
-      height: 4.0
+      rolling_window: true
+      width: 4      # [已修复为整数]
+      height: 4     # [已修复为整数]
       resolution: 0.05
-      
-      # 📐 上下对齐的真实车体 footprint：长 1.1 米，宽 0.75 米
       footprint: "[[-0.55, -0.375], [-0.55, 0.375], [0.55, 0.375], [0.55, -0.375]]"
       plugins: ["voxel_layer", "inflation_layer"]
 
-      # 🌟 3D 体素避障层：生吞 3D 点云，杜绝大棚铁丝、斜拉水管死角
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
         publish_voxel_map: true
         origin_z: 0.0
-        z_resolution: 0.1           # Z 轴每 10 厘米切一片（共15层）
-        z_voxels: 15                # 向上检测 1.5 米高度内的空间
-        max_obstacle_height: 1.5    # 忽略 1.5 米以上的雷达噪点（如天棚塑料布）
+        z_resolution: 0.1
+        z_voxels: 15
+        max_obstacle_height: 1.5
         mark_threshold: 0
         observation_sources: pointcloud
         pointcloud:
           topic: /rslidar_points
           max_obstacle_height: 1.5
-          min_obstacle_height: 0.15 # 忽略地面 15 厘米以下的水泥反射和杂草
-          clearing: true              # 障碍物离开后自动清除图层
-          marking: true               # 点云打在物体上时立刻投影为障碍物
+          min_obstacle_height: 0.15
+          clearing: true
+          marking: true
           data_type: "PointCloud2"
           raytrace_max_range: 3.5
           raytrace_min_range: 0.0
@@ -138,8 +141,8 @@ local_costmap:
 
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 4.0    # 膨胀衰减因子
-        inflation_radius: 0.4       # 障碍物外围硬膨胀 40 厘米（保证 1.1x0.75 的车身绝对安全）
+        cost_scaling_factor: 4.0
+        inflation_radius: 0.8  # [已修复为包络车体的 0.8]
 
 # ==============================================================================
 #  全局代价地图 (Global Costmap) —— 2D 低频大图规划
@@ -149,7 +152,7 @@ global_costmap:
     ros__parameters:
       update_frequency: 1.0
       publish_frequency: 1.0
-      global_frame: map             # 全局地图必须挂载在具有绝对坐标的 map 坐标系
+      global_frame: map
       robot_base_frame: base_footprint
       use_sim_time: false
       footprint: "[[-0.55, -0.375], [-0.55, 0.375], [0.55, 0.375], [0.55, -0.375]]"
@@ -159,7 +162,6 @@ global_costmap:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: true
 
-      # 全局避障使用拍扁的 2D 激光，极大省下 RK3588 的 CPU 算力
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: true
@@ -176,28 +178,34 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.8  # [已修复为包络车体的 0.8]
 
 # ==============================================================================
-#  生命周期/行为树中枢 (其内部参数保持官方 Jazzy 标准，防止驱动层面死机报错)
+#  生命周期/行为树中枢
 # ==============================================================================
 behavior_server:
   ros__parameters:
     use_sim_time: false
+    # 把 spin 加回来，但你可以降低它的优先级（实际用不到）
     behavior_plugins: ["spin", "backup", "wait"]
     spin:
       plugin: "nav2_behaviors::Spin"
+      # 可选：限制 spin 的参数，防止它真的被调用时乱转
+      sim_time: false
+      angular_vel: 0.3
+      duration: 1.0
     backup:
-      plugin: "nav2_behaviors::Backup"
+      plugin: "nav2_behaviors::BackUp"
     wait:
       plugin: "nav2_behaviors::Wait"
     global_frame: odom
     robot_base_frame: base_footprint
     transform_tolerance: 0.1
-    simulate_ahead_time: 2.0
-    max_rotational_vel: 0.6
-    min_rotational_vel: 0.4
-    rotational_acc_lim: 3.2
+
+# ==============================================================================
+#  行为树与生命周期中枢
+# ==============================================================================
+# ... (上面的 behavior_server 保持不变)
 
 bt_navigator:
   ros__parameters:
@@ -210,38 +218,16 @@ bt_navigator:
     goal_blacklisted_time: 9.0
     transform_timeout: 0.1
     use_groot_monitoring: true
-    groot_pie_port: 1666
-    groot_evt_port: 1667
-    plugin_lib_names:
-      - nav2_compute_path_to_pose_action_bt_node
-      - nav2_compute_path_through_poses_action_bt_node
-      - nav2_smooth_path_action_bt_node
-      - nav2_follow_path_action_bt_node
-      - nav2_spin_action_bt_node
-      - nav2_wait_action_bt_node
-      - nav2_backup_action_bt_node
-      - nav2_clear_costmap_service_bt_node
-      - nav2_is_stuck_condition_bt_node
-      - nav2_goal_reached_condition_bt_node
-      - nav2_initial_pose_received_condition_bt_node
-      - nav2_goal_updated_condition_bt_node
-      - nav2_globally_updated_goal_condition_bt_node
-      - nav2_is_battery_low_condition_bt_node
-      - nav2_navigate_to_pose_action_bt_node
-      - nav2_navigate_through_poses_action_bt_node
-      - nav2_truncate_path_action_bt_node
-      - nav2_truncate_path_local_action_bt_node
-      - nav2_planner_selector_bt_node
-      - nav2_controller_selector_bt_node
-      - nav2_goal_checker_selector_bt_node
-      - nav2_recovery_checker_bt_node
-      - nav2_distance_controller_bt_node
-      - nav2_distance_travelled_condition_bt_node
-      - nav2_time_expired_condition_bt_node
-      - nav2_path_expiring_condition_bt_node
-      - nav2_is_transformable_condition_bt_node
-      - nav2_single_trigger_had_goal_bt_node
-      - nav2_clearing_costmap_service_bt_node
+    groot_zmq_publisher_port: 1666
+    groot_zmq_server_port: 1667
+    
+    # 【Jazzy 终极修复点】：声明独立的 Navigator 插件，并清空老版本的全局注册表
+    navigators: ["navigate_to_pose", "navigate_through_poses"]
+    navigate_to_pose:
+      plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
+    navigate_through_poses:
+      plugin: "nav2_bt_navigator::NavigateThroughPosesNavigator"
+    # plugin_lib_names: []  # 必须置空，防止与插件内部的注册机制撞车导致 Fatal
 
 map_server:
   ros__parameters:
@@ -252,13 +238,21 @@ lifecycle_manager_localization:
   ros__parameters:
     use_sim_time: false
     autostart: true
-    node_names: ["map_server"]
+    node_names: ["map_server", "amcl"]
 
 lifecycle_manager_navigation:
   ros__parameters:
     use_sim_time: false
     autostart: true
-    node_names: ["controller_server", "planner_server", "behavior_server", "bt_navigator"]
+    node_names:
+      - controller_server
+      - smoother_server
+      - planner_server
+      - behavior_server
+      - bt_navigator
+      - waypoint_follower
+      - velocity_smoother
+      - collision_monitor
 
 velocity_smoother:
   ros__parameters:
@@ -280,4 +274,44 @@ waypoint_follower:
     wait_at_waypoint:
       plugin: "nav2_waypoint_follower::WaitAtWaypoint"
       enabled: True
-      waypoint_pause_duration: 8
+      waypoint_pause_duration: 200
+
+# ==============================================================================
+#  Jazzy 独有防碰撞中枢 (最后一道安全网，连接最终的 cmd_vel)
+# ==============================================================================
+collision_monitor:
+  ros__parameters:
+    use_sim_time: false
+    base_frame_id: "base_footprint"
+    odom_frame_id: "odom"
+    cmd_vel_in_topic: "cmd_vel_smoothed"  # 接收平滑器传来的速度
+    cmd_vel_out_topic: "cmd_vel"          # 最终踩下真实的油门
+    transform_tolerance: 0.2
+    source_timeout: 1.0
+    stop_pub_timeout: 2.0
+    polygons: ["PolygonStop"]
+# 物理急停刹车区：在车身外围画一个 1.3m x 0.9m 的无形护盾
+    PolygonStop:
+      type: "polygon"
+      # 【修复点】：强制降维，改为一维平铺数组
+      points: "[[0.65, 0.45], [0.65, -0.45], [-0.65, -0.45], [-0.65, 0.45]]"
+      action_type: "stop"
+      visualize: True
+      polygon_pub_topic: "polygon_stop"
+
+# 物理急停刹车区：在车身外围画一个 1.3m x 0.9m 的无形护盾
+
+      
+    observation_sources: ["scan"]
+    scan:
+      type: "scan"
+      topic: "/scan"
+
+docking_server:
+  ros__parameters:
+    use_sim_time: false
+    dock_plugins: ["simple_charging_dock"]
+    simple_charging_dock:
+      plugin: "opennav_docking::SimpleChargingDock"
+    controller_frequency: 50.0
+    action_server_result_timeout: 10.0

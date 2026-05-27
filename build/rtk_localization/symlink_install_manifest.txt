@@ -1,6 +1,8 @@
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/launch/mapping_absolute.launch.py
+/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/launch/nav2_bringup.launch.py
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/launch/rtk_localization.launch.py
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/dual_ekf_navsat.yaml
+/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/nav2_params_absolute.yaml
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/scan_filter_params.yaml
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/slam_mapping_absolute.yaml
 /home/cat/rtk_verify_ws/install/rtk_localization/lib/rtk_localization/dynamic_static_tf.py
