@@ -214,7 +214,7 @@ bt_navigator:
     odom_frame: odom
     robot_base_frame: base_footprint
     transform_tolerance: 0.1
-    default_nav_to_pose_bt_xml: ""
+    # default_nav_to_pose_bt_xml: ""
     goal_blacklisted_time: 9.0
     transform_timeout: 0.1
     use_groot_monitoring: true
