@@ -11,6 +11,9 @@ def generate_launch_description():
     
     map_yaml_file = os.path.join(os.path.expanduser('~'), 'rtk_verify_ws', 'maps', 'absolute_parking052801.yaml')
     nav2_params_file = os.path.join(pkg_rtk, 'config', 'nav2_params_absolute.yaml')
+    # 🔪 阿克曼专用行为树的绝对路径（bt_navigator 只认绝对路径）
+    ackermann_nav_xml = os.path.join(pkg_rtk, 'behavior_trees', 'ackermann_nav.xml')
+    ackermann_through_poses_xml = os.path.join(pkg_rtk, 'behavior_trees', 'ackermann_nav_through_poses.xml')
 
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -20,7 +23,10 @@ def generate_launch_description():
             'map': map_yaml_file,
             'use_sim_time': 'false',
             'params_file': nav2_params_file,
-            'autostart': 'true'
+            'autostart': 'true',
+            # 🔪 覆盖 YAML 里的相对路径，强制走绝对路径
+            'default_nav_to_pose_bt_xml': ackermann_nav_xml,
+            'default_navigate_through_poses_bt_xml': ackermann_through_poses_xml
         }.items()
     )
 

@@ -17,6 +17,7 @@ find_package(tf2_ros REQUIRED)
 install(DIRECTORY
   launch
   config
+  behavior_trees
   DESTINATION share/${PROJECT_NAME}
 )
 

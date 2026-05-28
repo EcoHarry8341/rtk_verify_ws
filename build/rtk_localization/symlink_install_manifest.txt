@@ -5,6 +5,8 @@
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/nav2_params_absolute.yaml
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/scan_filter_params.yaml
 /home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/config/slam_mapping_absolute.yaml
+/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/behavior_trees/ackermann_nav.xml
+/home/cat/rtk_verify_ws/install/rtk_localization/share/rtk_localization/behavior_trees/ackermann_nav_through_poses.xml
 /home/cat/rtk_verify_ws/install/rtk_localization/lib/rtk_localization/dynamic_static_tf.py
 /home/cat/rtk_verify_ws/install/rtk_localization/share/ament_index/resource_index/package_run_dependencies/rtk_localization
 /home/cat/rtk_verify_ws/install/rtk_localization/share/ament_index/resource_index/parent_prefix_path/rtk_localization

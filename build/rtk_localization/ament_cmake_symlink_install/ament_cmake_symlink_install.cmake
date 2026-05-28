@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "config" "DESTINATION" "share/rtk_localization")
-ament_cmake_symlink_install_directory("/home/cat/rtk_verify_ws/src/rtk_localization" DIRECTORY "launch" "config" "DESTINATION" "share/rtk_localization")
+# install(DIRECTORY "launch" "config" "behavior_trees" "DESTINATION" "share/rtk_localization")
+ament_cmake_symlink_install_directory("/home/cat/rtk_verify_ws/src/rtk_localization" DIRECTORY "launch" "config" "behavior_trees" "DESTINATION" "share/rtk_localization")
 
 # install(PROGRAMS "scripts/dynamic_static_tf.py" "DESTINATION" "lib/rtk_localization")
 ament_cmake_symlink_install_programs("/home/cat/rtk_verify_ws/src/rtk_localization" PROGRAMS "scripts/dynamic_static_tf.py" "DESTINATION" "lib/rtk_localization")
