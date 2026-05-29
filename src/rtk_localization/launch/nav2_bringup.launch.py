@@ -3,6 +3,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
 
 def generate_launch_description():
     pkg_rtk = get_package_share_directory('rtk_localization')
@@ -11,6 +12,14 @@ def generate_launch_description():
     # 地图和参数文件的绝对路径
     map_yaml_file = os.path.join(os.path.expanduser('~'), 'rtk_verify_ws', 'maps', 'absolute_parking052702.yaml')
     nav2_params_file = os.path.join(pkg_rtk, 'config', 'nav2_params_absolute.yaml')
+
+    # 时间戳中继节点：修正雷达硬件时间戳，对齐系统时钟
+    pc_relay = Node(
+        package='rtk_localization',
+        executable='pc_time_relay.py',
+        name='pc_time_relay',
+        output='screen'
+    )
 
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -26,4 +35,4 @@ def generate_launch_description():
         }.items()
     )
 
-    return LaunchDescription([nav2_launch])
+    return LaunchDescription([pc_relay, nav2_launch])

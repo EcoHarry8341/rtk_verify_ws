@@ -21,37 +21,40 @@ def generate_launch_description():
     # =========================================================
     
     # 2.1 雷达 (使用标定推算出的极高精度 XYZ，强制平放)
+    # yaw = π: 传感器 X 轴翻转 180° 指向物理车头，符合 REP-105
     tf_base_to_lidar = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_lidar',
         arguments=[
             '--x', '-0.018', '--y', '0.027', '--z', '0.756',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
             '--frame-id', 'base_footprint', '--child-frame-id', 'rslidar'
         ]
     )
 
     # 2.2 IMU
+    # yaw = π: 传感器 X 轴翻转 180° 指向物理车头，符合 REP-105
     tf_base_to_imu = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_imu',
         arguments=[
             '--x', '-0.087', '--y', '0.0', '--z', '0.596',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
             '--frame-id', 'base_footprint', '--child-frame-id', 'imu_link'
         ]
     )
 
     # 2.3 GPS天线
+    # yaw = π: 传感器 X 轴翻转 180° 指向物理车头，符合 REP-105
     tf_base_to_gps = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_base_to_gps',
         arguments=[
             '--x', '-0.410', '--y', '0.135', '--z', '0.509',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
             '--frame-id', 'base_footprint', '--child-frame-id', 'gps_link'
         ]
     )

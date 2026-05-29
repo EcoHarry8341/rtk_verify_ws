@@ -313,8 +313,8 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "config" "behavior_trees" "DESTINATION" "share/rtk_localization")
 ament_cmake_symlink_install_directory("/home/cat/rtk_verify_ws/src/rtk_localization" DIRECTORY "launch" "config" "behavior_trees" "DESTINATION" "share/rtk_localization")
 
-# install(PROGRAMS "scripts/dynamic_static_tf.py" "DESTINATION" "lib/rtk_localization")
-ament_cmake_symlink_install_programs("/home/cat/rtk_verify_ws/src/rtk_localization" PROGRAMS "scripts/dynamic_static_tf.py" "DESTINATION" "lib/rtk_localization")
+# install(PROGRAMS "scripts/dynamic_static_tf.py" "scripts/pc_time_relay.py" "DESTINATION" "lib/rtk_localization")
+ament_cmake_symlink_install_programs("/home/cat/rtk_verify_ws/src/rtk_localization" PROGRAMS "scripts/dynamic_static_tf.py" "scripts/pc_time_relay.py" "DESTINATION" "lib/rtk_localization")
 
 # install(FILES "/home/cat/rtk_verify_ws/build/rtk_localization/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rtk_localization" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/cat/rtk_verify_ws/src/rtk_localization" FILES "/home/cat/rtk_verify_ws/build/rtk_localization/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rtk_localization" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

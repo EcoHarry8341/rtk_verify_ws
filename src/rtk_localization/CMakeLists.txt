@@ -23,6 +23,7 @@ install(DIRECTORY
 
 install(PROGRAMS
   scripts/dynamic_static_tf.py
+  scripts/pc_time_relay.py
   DESTINATION lib/${PROJECT_NAME}
 )
 if(BUILD_TESTING)
