@@ -1,0 +1,12 @@
+image: absolute_parking052702.png
+mode: trinary
+resolution: 0.050
+origin: [-29.176, -25.420, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+initial_pose:
+      x: -29.0
+      y: -25.0
+      z: 0.0
+      yaw: 0.0

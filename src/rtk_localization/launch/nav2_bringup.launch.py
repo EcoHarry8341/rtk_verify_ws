@@ -1,19 +1,16 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     pkg_rtk = get_package_share_directory('rtk_localization')
     pkg_nav2 = get_package_share_directory('nav2_bringup')
     
-    map_yaml_file = os.path.join(os.path.expanduser('~'), 'rtk_verify_ws', 'maps', 'absolute_parking052801.yaml')
+    # 地图和参数文件的绝对路径
+    map_yaml_file = os.path.join(os.path.expanduser('~'), 'rtk_verify_ws', 'maps', 'absolute_parking052702.yaml')
     nav2_params_file = os.path.join(pkg_rtk, 'config', 'nav2_params_absolute.yaml')
-    # 🔪 阿克曼专用行为树的绝对路径（bt_navigator 只认绝对路径）
-    ackermann_nav_xml = os.path.join(pkg_rtk, 'behavior_trees', 'ackermann_nav.xml')
-    ackermann_through_poses_xml = os.path.join(pkg_rtk, 'behavior_trees', 'ackermann_nav_through_poses.xml')
 
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -23,10 +20,9 @@ def generate_launch_description():
             'map': map_yaml_file,
             'use_sim_time': 'false',
             'params_file': nav2_params_file,
-            'autostart': 'true',
-            # 🔪 覆盖 YAML 里的相对路径，强制走绝对路径
-            'default_nav_to_pose_bt_xml': ackermann_nav_xml,
-            'default_navigate_through_poses_bt_xml': ackermann_through_poses_xml
+            'autostart': 'true'
+            # 🔪 已经把 DeepSeek 瞎加的 XML 注入代码彻底删除！
+            # 现在 bt_navigator 会老老实实去读 YAML 里的绝对路径。
         }.items()
     )
 

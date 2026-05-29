@@ -76,4 +76,4 @@ navsat_transform_node:
     wait_for_datum: true
     base_link_frame: base_footprint
     # 一会去停车场替换！
-    datum: [45.7394912333, 126.7170297150, -1.5708]   # 实测均值，第三个是航向角
+    datum: [45.74057357, 126.71749964, -1.5708]   # 实测均值，第三个是航向角

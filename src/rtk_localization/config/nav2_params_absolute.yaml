@@ -12,6 +12,13 @@ amcl:
     base_frame_id: "base_footprint"
     global_frame_id: "map"
     odom_frame_id: "odom"
+    # 【Nav2 Jazzy】设定初始位姿，确保 AMCL 启动时落在地图有效区域内
+    set_initial_pose: true
+    initial_pose:
+      x: -29.0
+      y: -25.0
+      z: 0.0
+      yaw: 0.0
 
 # ==============================================================================
 #  控制器中枢 (Controller Server) —— 局部路径跟随
@@ -142,7 +149,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 5.0  # 加大衰减系数，让边缘没那么红
-        inflation_radius: 0.45    # <=== 从 0.8 暴降到 0.45（贴身距离）
+        inflation_radius: 0.8   # <=== 从 0.8 暴降到 0.45（贴身距离）
 
 # ==============================================================================
 #  全局代价地图 (Global Costmap) —— 2D 低频大图规划
@@ -178,7 +185,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 4.0  # 加大衰减系数
-        inflation_radius: 0.45    # <=== 同上，降到 0.45
+        inflation_radius: 0.8   # <=== 同上，降到 0.45
 
 # ==============================================================================
 #  生命周期/行为树中枢
@@ -209,8 +216,8 @@ bt_navigator:
     robot_base_frame: base_footprint
     transform_tolerance: 0.1
     # 🔪 挂载阿克曼双剧本：单点导航 + 多航点导航
-    default_nav_to_pose_bt_xml: "ackermann_nav.xml"
-    default_navigate_through_poses_bt_xml: "ackermann_nav_through_poses.xml"
+    default_nav_to_pose_bt_xml: "/home/cat/rtk_verify_ws/src/rtk_localization/behavior_trees/ackermann_nav.xml"
+    default_nav_through_poses_bt_xml: "/home/cat/rtk_verify_ws/src/rtk_localization/behavior_trees/ackermann_nav_through_poses.xml"
     goal_blacklisted_time: 9.0
     transform_timeout: 0.1
     use_groot_monitoring: true
@@ -228,7 +235,6 @@ bt_navigator:
 map_server:
   ros__parameters:
     use_sim_time: false
-    yaml_filename: ""
 
 lifecycle_manager_localization:
   ros__parameters:
@@ -289,8 +295,8 @@ collision_monitor:
 # 物理急停刹车区：在车身外围画一个 1.3m x 0.9m 的无形护盾
     PolygonStop:
       type: "polygon"
-      # 车长1.1m宽0.75m，只留 10cm 极限刹车间隙，前0.60 左右0.45
-      points: [0.60, 0.45, 0.60, -0.45, -0.60, -0.45, -0.60, 0.45]
+      # 【终极正解】：必须带双引号！必须是二维嵌套数组！把它当成一整句话传给系统！
+      points: "[[0.60, 0.45], [0.60, -0.45], [-0.60, -0.45], [-0.60, 0.45]]"
       action_type: "stop"
       visualize: True
       polygon_pub_topic: "polygon_stop"
