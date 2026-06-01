@@ -28,7 +28,7 @@ def generate_launch_description():
         name='tf_base_to_lidar',
         arguments=[
             '--x', '-0.018', '--y', '0.027', '--z', '0.756',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
             '--frame-id', 'base_footprint', '--child-frame-id', 'rslidar'
         ]
     )
@@ -41,7 +41,7 @@ def generate_launch_description():
         name='tf_base_to_imu',
         arguments=[
             '--x', '-0.087', '--y', '0.0', '--z', '0.596',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
             '--frame-id', 'base_footprint', '--child-frame-id', 'imu_link'
         ]
     )
@@ -54,7 +54,7 @@ def generate_launch_description():
         name='tf_base_to_gps',
         arguments=[
             '--x', '-0.410', '--y', '0.135', '--z', '0.509',
-            '--roll', '0.0', '--pitch', '0.0', '--yaw', '3.14159',
+            '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
             '--frame-id', 'base_footprint', '--child-frame-id', 'gps_link'
         ]
     )
@@ -77,7 +77,10 @@ def generate_launch_description():
         name='ekf_filter_node_global',
         output='screen',
         parameters=[config_file],
-        remappings=[('odometry/filtered', 'odometry/global')]  
+        remappings=[
+            ('odometry/filtered', 'odometry/global'),
+            ('/set_pose', '/initialpose')
+        ]
     )
 
     # 5. Navsat Transform (天眼转换器)
